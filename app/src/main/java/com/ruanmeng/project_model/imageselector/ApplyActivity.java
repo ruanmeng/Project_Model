@@ -59,7 +59,6 @@ public class ApplyActivity extends BaseActivity {
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         mRecyclerView.setLayoutManager(layoutManager);
 
-
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         imagesPath.add("-1");
         adapter = new ApplyAdapter(this, R.layout.item_apply_img, imagesPath);
@@ -71,11 +70,9 @@ public class ApplyActivity extends BaseActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == ImageSelector.REQUEST_SELECT_IMAGE) {
-            if (resultCode == RESULT_OK)
-            {
+            if (resultCode == RESULT_OK) {
                 ArrayList<String> images = data.getStringArrayListExtra(ImageSelector.SELECTED_RESULT);
-                if (images != null)
-                {
+                if (images != null) {
                     if (imagesPath.contains("-1"))
                         imagesPath.remove("-1");
 
@@ -94,9 +91,9 @@ public class ApplyActivity extends BaseActivity {
 //                    }
                     adapter.notifyDataSetChanged();
                 }
-                if (imagesPath.size()==1){
+                if (imagesPath.size() == 1) {
                     lay_showmsg.setVisibility(View.VISIBLE);
-                }else {
+                } else {
                     lay_showmsg.setVisibility(View.GONE);
                 }
             }
@@ -113,8 +110,7 @@ public class ApplyActivity extends BaseActivity {
         }
 
         @Override
-        public void convert(final ViewHolder holder, final String info)
-        {
+        public void convert(final ViewHolder holder, final String info) {
             ImageView iv_img = holder.getView(R.id.iv_item_apply_img);
             ImageView iv_del = holder.getView(R.id.iv_item_apply_img_del);
 
@@ -146,7 +142,7 @@ public class ApplyActivity extends BaseActivity {
                     if (!mDatas.contains("-1"))
                         mDatas.add("-1");
 
-                    if (mDatas.size()==1){
+                    if (mDatas.size() == 1) {
                         lay_showmsg.setVisibility(View.VISIBLE);
                     }
 
@@ -173,5 +169,6 @@ public class ApplyActivity extends BaseActivity {
 
         }
     }
+
 
 }

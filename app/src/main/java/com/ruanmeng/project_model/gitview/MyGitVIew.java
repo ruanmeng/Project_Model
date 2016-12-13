@@ -50,13 +50,14 @@ public class MyGitVIew extends AppCompatActivity {
         CircularAnimUtil.show(btnMyFlashtv);
     }
 
-    @OnClick({R.id.btn_my_probar, R.id.btn2, R.id.btn_my_flashtv, R.id.btn_my_box,R.id.btn_my_rulerview})
+    @OnClick({R.id.btn_my_probar, R.id.btn2, R.id.btn_my_flashtv, R.id.btn_my_box, R.id.btn_my_rulerview})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_my_probar:
 
 //                startActivity(new Intent(bContext, MyTestProgress.class));
 //                转圈启动动画
+                //                      bContext： Context                      btnMyProbar 动画的初始控件
                 CircularAnimUtil.startActivity(bContext, new Intent(bContext, MyTestProgress.class), btnMyProbar, R.color.material_blue);
 //                CircularAnimUtil.startActivity(bContext, new Intent(bContext, MyTestProgress.class), btnMyProbar, R.drawable.icon2);
                 break;

@@ -2,6 +2,8 @@ package com.ruanmeng.project_model.ViewPager.mFragment;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import com.ruanmeng.project_model.R;
  * Created by Administrator on 2016/11/2.
  */
 public class Fragment_02 extends BaseFragment {
+
 
     /**
      * 预加载标志，默认值为false，设置为true，表示已经预加载完成，可以加载数据
@@ -46,9 +49,8 @@ public class Fragment_02 extends BaseFragment {
     private Fragment_02() {
 //         私有化构造参数
     }
-    public  Fragment_02(Context context){
 
-
+    public Fragment_02(Context context) {
     }
 
     /**
@@ -74,6 +76,40 @@ public class Fragment_02 extends BaseFragment {
             return;
         }
         //TODO 此处填充view中各个控件的数据
+    }
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Log.d("--lfc","Fragment_02 onCreateView");
+
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.d("--lfc","Fragment_02 onCreateView");
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("--lfc","Fragment_02 onCreateView");
+
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("--lfc","Fragment_02 onCreateView");
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        Log.d("--lfc","Fragment_02 onCreateView");
     }
 
 }

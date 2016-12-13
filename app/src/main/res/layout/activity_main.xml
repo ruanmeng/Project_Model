@@ -383,6 +383,17 @@
                     android:textAllCaps="false"/>
 
                 <Button
+                    android:id="@+id/button39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="doClick"
+                    android:text="滑动Scrollview"
+                    android:textAllCaps="false"/>
+
+                <Button
                     android:id="@+id/button35"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

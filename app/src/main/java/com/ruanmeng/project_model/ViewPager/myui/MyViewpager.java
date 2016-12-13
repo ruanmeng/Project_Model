@@ -97,7 +97,7 @@ public class MyViewpager extends AppCompatActivity {
         FragmentManager fmg = getSupportFragmentManager();
 
         myAdapte = new MyAdapter(fmg, MyViewpager.this, mlist_fragment);
-        mviewpager.setOffscreenPageLimit(2);
+//        mviewpager.setOffscreenPageLimit(2);
         mviewpager.setAdapter(myAdapte);
     }
 
@@ -112,7 +112,8 @@ public class MyViewpager extends AppCompatActivity {
 //         设置不可移动 固定屏幕宽度
         commonNavigator.setAdjustMode(true);
 
-        commonNavigator.setAdapter(new CommonNavigatorAdapter() {
+        commonNavigator.setAdapter(new CommonNavigatorAdapter()
+        {
             @Override
             public int getCount() {
                 if (mlist_title != null) {
@@ -152,7 +153,8 @@ public class MyViewpager extends AppCompatActivity {
             }
 
             @Override
-            public IPagerIndicator getIndicator(Context context) {
+            public IPagerIndicator getIndicator(Context context)
+            {
                 LinePagerIndicator indicator = new LinePagerIndicator(context);
                 //                 设置指示器动画
                 indicator.setStartInterpolator(new AccelerateInterpolator());

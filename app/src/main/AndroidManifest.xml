@@ -193,6 +193,8 @@
         </activity>
         <activity android:name=".gitview.myRulerview.RulerView_Activity">
         </activity>
+        <activity android:name=".myscroll.MyTextScroll">
+        </activity>
     </application>
 
 </manifest>
