@@ -41,6 +41,8 @@ public class MyTestTextView extends BaseActivity {
         sp.setSpan(new AbsoluteSizeSpan(18, true), 0, name1.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE); //字体大小
         sp.setSpan(new ForegroundColorSpan(0xFFFF0000), (name1 + name2).length(), str.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE); //字体颜色
         sp.setSpan(new AbsoluteSizeSpan(10, true), (name1 + name2).length(), str.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE); //字体大小
+
+//        这个 SpannableStringBuilder 如果转为 tostring 就没有作用了！
         tvMySuptertext.setText(sp);
 
     }
