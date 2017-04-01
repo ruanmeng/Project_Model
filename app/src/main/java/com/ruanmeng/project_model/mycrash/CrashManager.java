@@ -141,6 +141,9 @@ public final class CrashManager {
                                     intent.putExtra(EXTRA_SHOW_ERROR_DETAILS, showErrorDetails);
                                     intent.putExtra(EXTRA_IMAGE_DRAWABLE_ID, defaultErrorActivityDrawableId);
                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+
+                                    // TODO: 2017/3/31  启动崩溃页面
                                     application.startActivity(intent);
                                 }
                             }
@@ -615,10 +618,13 @@ public final class CrashManager {
         resolvedActivityClass = CrashManager.getErrorActivityClassWithIntentFilter(context);
 
         //Else, get the default launcher activity
-        if (resolvedActivityClass == null) 
-        {
+        if (resolvedActivityClass == null) {
             // TODO: 2016/9/29   在这个页面设置 崩溃  重新启动页面
             resolvedActivityClass = ErrorActivity.class;
+//            resolvedActivityClass = Main2Activity.class;
+
+
+
         }
 
         return resolvedActivityClass;

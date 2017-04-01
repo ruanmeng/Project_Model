@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.ruanmeng.project_model.R;
 import com.ruanmeng.utils.CommonUtil;
+import com.ruanmeng.utils2.SnackBarUtils;
 
 public class MyTestProgress extends AppCompatActivity {
 
@@ -27,6 +29,7 @@ public class MyTestProgress extends AppCompatActivity {
     private Button btnMyAdd;
     private ProgressBar pbMyview;
     private Button btnMySub;
+    private LinearLayout layTotleview;
 
 
     @Override
@@ -34,6 +37,8 @@ public class MyTestProgress extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_test_progress);
 
+
+        layTotleview = (LinearLayout) findViewById(R.id.lay_totleview);
 
         initView1();
         initView2();
@@ -49,7 +54,10 @@ public class MyTestProgress extends AppCompatActivity {
             public void onClick(View v) {
                 pbVerticalSimpleShape.setProgress(pbVerticalSimpleShape.getProgress() + 5);
 //                CircularAnimUtil.show(mBtnAdd);
-                CommonUtil.showToask(MyTestProgress.this, pbVerticalSimpleShape.getProgress() + "");
+//                CommonUtil.showToask(MyTestProgress.this, pbVerticalSimpleShape.getProgress() + "");
+
+                SnackBarUtils.ShortSnackbar(layTotleview,"我添加",SnackBarUtils.Info);
+//                SnackBarUtils.ShortSnackbar(layTotleview,"我添加");
             }
         });
 
@@ -60,7 +68,8 @@ public class MyTestProgress extends AppCompatActivity {
 
                 pbVerticalSimpleShape.setProgress(pbVerticalSimpleShape.getProgress() - 5);
 //                CircularAnimUtil.hide(mBtnAdd);
-                CommonUtil.showToask(MyTestProgress.this, pbVerticalSimpleShape.getProgress() + "");
+//                CommonUtil.showToask(MyTestProgress.this, pbVerticalSimpleShape.getProgress() + "");
+                SnackBarUtils.ShortSnackbar(layTotleview,"我减少",SnackBarUtils.Confirm);
 
             }
         });

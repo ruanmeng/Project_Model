@@ -25,7 +25,6 @@ public class Calendar3Activity extends BaseActivity {
     ViewPager mViewPager;
 
     private int month = 7;
-
     private CalendarViewAdapter<CalendarCard> adapter;
     private SildeDirection mDirection = SildeDirection.NO_SILDE;
 
@@ -52,14 +51,14 @@ public class Calendar3Activity extends BaseActivity {
             views[i] = new CalendarCard(this, new CalendarCard.OnCellClickListener() {
                 @Override
                 public void clickDate(CustomDate date) {
-                    CommonUtil.showToask(baseContext, date.year + "年"+ date.month + "月"+ date.day + "日");
+                    CommonUtil.showToask(baseContext, date.year + "年" + date.month + "月" + date.day + "日");
                     getData(date);
                 }
 
                 @Override
                 public void changeDate(CustomDate date) {
 
-                    tv_time.setText(date.year + "年"+ date.month + "月");
+                    tv_time.setText(date.year + "年" + date.month + "月");
                     month = date.month;
                     if (date.month < 9) {
                         tv_time.setText(date.year + "年0" + date.month + "月");
@@ -80,16 +79,21 @@ public class Calendar3Activity extends BaseActivity {
             }
 
             @Override
-            public void onPageScrolled(int arg0, float arg1, int arg2) { }
+            public void onPageScrolled(int arg0, float arg1, int arg2) {
+            }
 
             @Override
-            public void onPageScrollStateChanged(int arg0) { }
+            public void onPageScrollStateChanged(int arg0) {
+            }
         });
     }
 
     private void getData(CustomDate date) {
         // dates.clear();
-        dates.add(date.year + "-"+ date.month + "-"+ date.day);
+//        通过固定集合的长度  获取 选择的是 哪一个  并替换
+
+        dates.add(date.year + "-" + date.month + "-" + date.day);
+
         int page = mViewPager.getCurrentItem() % 3;
         mShowViews = adapter.getAllItems();
         mShowViews[page].setQiandaoList(dates);

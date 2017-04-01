@@ -105,8 +105,7 @@ dependencies {
     //     viewpager  indicator
     compile project(':magicindicator')
     compile project(':Rulberview')
-
-//65536
+    //65536
     compile 'com.android.support:multidex:1.0.1'
-
+    compile 'com.github.castorflex.verticalviewpager:library:19.0.1'
 }

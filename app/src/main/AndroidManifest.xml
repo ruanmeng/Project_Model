@@ -195,6 +195,20 @@
         </activity>
         <activity android:name=".myscroll.MyTextScroll">
         </activity>
+        <activity android:name=".gitview.web_progress.MyProgress_WebView">
+        </activity>
+        <activity android:name=".myscroll.MyTestScroll2">
+        </activity>
+        <activity android:name=".UpLoadPic.TextPhotoActivity">
+        </activity>
+        <activity android:name=".Main2Activity">
+        </activity>
+        <activity android:name=".calendar.Calendar4Activity">
+        </activity>
+        <activity android:name=".calendar.Calendar5Activity">
+        </activity>
+        <activity android:name=".gitview.mySuperTextview.MyTestTextView">
+        </activity>
     </application>
 
 </manifest>

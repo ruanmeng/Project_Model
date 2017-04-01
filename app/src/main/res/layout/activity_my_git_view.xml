@@ -25,18 +25,37 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:text="闪烁的广告"/>
+
         <Button
             android:id="@+id/btn_my_box"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:text="checkBox 按钮"/>
+            android:text="checkBox 按钮"
+            android:textAllCaps="false"/>
+
         <Button
             android:id="@+id/btn_my_rulerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:text="刻度尺效果"/>
+
+        <Button
+            android:id="@+id/btn_my_pro_web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="进度条webviewe"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_my_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="富文本"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/btn2"

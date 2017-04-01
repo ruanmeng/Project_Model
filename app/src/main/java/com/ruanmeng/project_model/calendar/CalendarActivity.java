@@ -29,6 +29,9 @@ public class CalendarActivity extends BaseActivity {
             case R.id.button10:
                 startActivity(Calendar3Activity.class);
                 break;
+            case R.id.button11:
+                startActivity(Calendar4Activity.class);
+                break;
         }
     }
 

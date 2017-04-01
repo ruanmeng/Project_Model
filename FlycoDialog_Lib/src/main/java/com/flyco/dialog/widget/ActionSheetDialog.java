@@ -31,51 +31,97 @@ import java.util.ArrayList;
  * Dialog like iOS ActionSheet(iOS风格对话框)
  */
 public class ActionSheetDialog extends BottomBaseDialog<ActionSheetDialog> {
-    /** ListView */
+    /**
+     * ListView
+     */
     private ListView mLv;
-    /** title */
+    /**
+     * title
+     */
     private TextView mTvTitle;
-    /** title underline(标题下划线) */
+    /**
+     * title underline(标题下划线)
+     */
     private View mVLineTitle;
-    /** mCancel button(取消按钮) */
+    /**
+     * mCancel button(取消按钮)
+     */
     private TextView mTvCancel;
-    /** corner radius,dp(圆角程度,单位dp) */
+    /**
+     * corner radius,dp(圆角程度,单位dp)
+     */
     private float mCornerRadius = 5;
-    /** title background color(标题背景颜色) */
+    /**
+     * title background color(标题背景颜色)
+     */
     private int mTitleBgColor = Color.parseColor("#ddffffff");
-    /** title text(标题) */
+    /**
+     * title text(标题)
+     */
     private String mTitle = "提示";
-    /** title height(标题栏高度) */
+    /**
+     * title height(标题栏高度)
+     */
     private float mTitleHeight = 48;
-    /** title textcolor(标题颜色) */
+    /**
+     * title textcolor(标题颜色)
+     */
     private int mTitleTextColor = Color.parseColor("#8F8F8F");
-    /** title textsize(标题字体大小,单位sp) */
+    /**
+     * title textsize(标题字体大小,单位sp)
+     */
     private float mTitleTextSize = 17.5f;
-    /** ListView background color(ListView背景色) */
+    /**
+     * ListView background color(ListView背景色)
+     */
     private int mLvBgColor = Color.parseColor("#ddffffff");
-    /** divider color(ListView divider颜色) */
+    /**
+     * divider color(ListView divider颜色)
+     */
     private int mDividerColor = Color.parseColor("#D7D7D9");
-    /** divider height(ListView divider高度) */
+    /**
+     * divider height(ListView divider高度)
+     */
     private float mDividerHeight = 0.8f;
-    /** item press color(ListView item按住颜色) */
+    /**
+     * item press color(ListView item按住颜色)
+     */
     private int mItemPressColor = Color.parseColor("#ffcccccc");
-    /** item textcolor(ListView item文字颜色) */
+    /**
+     * item textcolor(ListView item文字颜色)
+     */
     private int mItemTextColor = Color.parseColor("#44A2FF");
-    /** item textsize(ListView item文字大小) */
+    /**
+     * item textsize(ListView item文字大小)
+     */
     private float mItemTextSize = 17.5f;
-    /** item height(ListView item高度) */
+    /**
+     * item height(ListView item高度)
+     */
     private float mItemHeight = 48;
-    /** enable title show(是否显示标题) */
+    /**
+     * enable title show(是否显示标题)
+     */
     private boolean mIsTitleShow = true;
-    /*** cancel btn text(取消按钮内容) */
+    /***
+     * cancel btn text(取消按钮内容)
+     */
     private String mCancelText = "取消";
-    /** cancel btn text color(取消按钮文字颜色) */
+    /**
+     * cancel btn text color(取消按钮文字颜色)
+     */
     private int mCancelTextColor = Color.parseColor("#44A2FF");
-    /** cancel btn text size(取消按钮文字大小) */
+    /**
+     * cancel btn text size(取消按钮文字大小)
+     */
     private float mCancelTextSize = 17.5f;
-    /** adapter(自定义适配器) */
+    /**
+     * adapter(自定义适配器)
+     */
     private BaseAdapter mAdapter;
-    /** operation items(操作items) */
+    /**
+     * operation items(操作items)
+     */
     private ArrayList<DialogMenuItem> mContents = new ArrayList<>();
     private OnOperItemClickL mOnOperItemClickL;
     private LayoutAnimationController mLac;
@@ -221,109 +267,145 @@ public class ActionSheetDialog extends BottomBaseDialog<ActionSheetDialog> {
         mLv.setLayoutAnimation(mLac);
     }
 
-    /** set title background color(设置标题栏背景色) */
+    /**
+     * set title background color(设置标题栏背景色)
+     */
     public ActionSheetDialog titleBgColor(int titleBgColor) {
         mTitleBgColor = titleBgColor;
         return this;
     }
 
-    /** set title text(设置标题内容) */
+    /**
+     * set title text(设置标题内容)
+     */
     public ActionSheetDialog title(String title) {
         mTitle = title;
         return this;
     }
 
-    /** set titleHeight(设置标题高度) */
+    /**
+     * set titleHeight(设置标题高度)
+     */
     public ActionSheetDialog titleHeight(float titleHeight) {
         mTitleHeight = titleHeight;
         return this;
     }
 
-    /** set title textsize(设置标题字体大小) */
+    /**
+     * set title textsize(设置标题字体大小)
+     */
     public ActionSheetDialog titleTextSize_SP(float titleTextSize_SP) {
         mTitleTextSize = titleTextSize_SP;
         return this;
     }
 
-    /** set title textcolor(设置标题字体颜色) */
+    /**
+     * set title textcolor(设置标题字体颜色)
+     */
     public ActionSheetDialog titleTextColor(int titleTextColor) {
         mTitleTextColor = titleTextColor;
         return this;
     }
 
-    /** enable title show(设置标题是否显示) */
+    /**
+     * enable title show(设置标题是否显示)
+     */
     public ActionSheetDialog isTitleShow(boolean isTitleShow) {
         mIsTitleShow = isTitleShow;
         return this;
     }
 
-    /** set ListView background color(设置ListView背景) */
+    /**
+     * set ListView background color(设置ListView背景)
+     */
     public ActionSheetDialog lvBgColor(int lvBgColor) {
         mLvBgColor = lvBgColor;
         return this;
     }
 
-    /** set corner radius(设置圆角程度,单位dp) */
+    /**
+     * set corner radius(设置圆角程度,单位dp)
+     */
     public ActionSheetDialog cornerRadius(float cornerRadius_DP) {
         mCornerRadius = cornerRadius_DP;
         return this;
     }
 
-    /** set divider color(ListView divider颜色) */
+    /**
+     * set divider color(ListView divider颜色)
+     */
     public ActionSheetDialog dividerColor(int dividerColor) {
         mDividerColor = dividerColor;
         return this;
     }
 
-    /** set divider height(ListView divider高度) */
+    /**
+     * set divider height(ListView divider高度)
+     */
     public ActionSheetDialog dividerHeight(float dividerHeight_DP) {
         mDividerHeight = dividerHeight_DP;
         return this;
     }
 
-    /** set item press color(item按住颜色) */
+    /**
+     * set item press color(item按住颜色)
+     */
     public ActionSheetDialog itemPressColor(int itemPressColor) {
         mItemPressColor = itemPressColor;
         return this;
     }
 
-    /** set item textcolor(item字体颜色)* @return ActionSheetDialog */
+    /**
+     * set item textcolor(item字体颜色)* @return ActionSheetDialog
+     */
     public ActionSheetDialog itemTextColor(int itemTextColor) {
         mItemTextColor = itemTextColor;
         return this;
     }
 
-    /** set item textsize(item字体大小) */
+    /**
+     * set item textsize(item字体大小)
+     */
     public ActionSheetDialog itemTextSize(float itemTextSize_SP) {
         mItemTextSize = itemTextSize_SP;
         return this;
     }
 
-    /** set item height(item高度) */
+    /**
+     * set item height(item高度)
+     */
     public ActionSheetDialog itemHeight(float itemHeight_DP) {
         mItemHeight = itemHeight_DP;
         return this;
     }
 
-    /** set layoutAnimation(设置layout动画 ,传入null将不显示layout动画) */
+    /**
+     * set layoutAnimation(设置layout动画 ,传入null将不显示layout动画)
+     */
     public ActionSheetDialog layoutAnimation(LayoutAnimationController lac) {
         mLac = lac;
         return this;
     }
 
-    /** set cancel btn text(设置取消按钮内容) */
+    /**
+     * set cancel btn text(设置取消按钮内容)
+     */
     public ActionSheetDialog cancelText(String cancelText) {
         mCancelText = cancelText;
         return this;
     }
 
-    /** cancel btn text color(取消按钮文字颜色) */
+    /**
+     * cancel btn text color(取消按钮文字颜色)
+     */
     public ActionSheetDialog cancelText(int cancelTextColor) {
         mCancelTextColor = cancelTextColor;
         return this;
     }
 
-    /** cancel btn text size(取消按钮文字大小) */
+    /**
+     * cancel btn text size(取消按钮文字大小)
+     */
     public ActionSheetDialog cancelTextSize(float cancelTextSize) {
         mCancelTextSize = cancelTextSize;
         return this;

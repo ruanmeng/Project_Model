@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/FlycoDialog_Lib/FlycoDialog_Lib.iml" filepath="$PROJECT_DIR$/FlycoDialog_Lib/FlycoDialog_Lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/ImageSeletor/ImageSeletor.iml" filepath="$PROJECT_DIR$/ImageSeletor/ImageSeletor.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project_Model.iml" filepath="$PROJECT_DIR$/Project_Model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rulberview/Rulberview.iml" filepath="$PROJECT_DIR$/Rulberview/Rulberview.iml" />
       <module fileurl="file://$PROJECT_DIR$/SwipLayout/SwipLayout.iml" filepath="$PROJECT_DIR$/SwipLayout/SwipLayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/WheelView/WheelView.iml" filepath="$PROJECT_DIR$/WheelView/WheelView.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZoomView/ZoomView.iml" filepath="$PROJECT_DIR$/ZoomView/ZoomView.iml" />
@@ -14,7 +15,6 @@
       <module fileurl="file://$PROJECT_DIR$/indexablelistview/indexablelistview.iml" filepath="$PROJECT_DIR$/indexablelistview/indexablelistview.iml" />
       <module fileurl="file://$PROJECT_DIR$/magicindicator/magicindicator.iml" filepath="$PROJECT_DIR$/magicindicator/magicindicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/nohttp/nohttp.iml" filepath="$PROJECT_DIR$/nohttp/nohttp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Rulberview/rulberview.iml" filepath="$PROJECT_DIR$/Rulberview/rulberview.iml" />
       <module fileurl="file://$PROJECT_DIR$/segmentcontrol/segmentcontrol.iml" filepath="$PROJECT_DIR$/segmentcontrol/segmentcontrol.iml" />
       <module fileurl="file://$PROJECT_DIR$/xrecyclerview/xrecyclerview.iml" filepath="$PROJECT_DIR$/xrecyclerview/xrecyclerview.iml" />
     </modules>

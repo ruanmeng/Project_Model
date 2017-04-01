@@ -92,10 +92,31 @@ public class MyCityList extends AppCompatActivity {
                     CityEntity mce = new CityEntity();
                     mce.setName(textname);
                     mlist.add(mce);
+
+
                 }
+                // TODO: 2016/12/19    测试保驾护航
+                CityEntity mce1 = new CityEntity();
+                mce1.setName("讴歌");
+                CityEntity mce2 = new CityEntity();
+                mce2.setName("钣金件");
+                CityEntity mce3 = new CityEntity();
+                mce3.setName("Nike");
+                CityEntity mce4 = new CityEntity();
+                mce4.setName("Puma");
+                // TODO: 2016/12/19   中英文数字 混合 报错   待解决
+//                CityEntity mce5 = new CityEntity();
+//                mce4.setName("1a9好");
+
+                mlist.add(mce1);
+                mlist.add(mce2);
+                mlist.add(mce3);
+                mlist.add(mce4);
+//                mlist.add(mce5);
 
                 initGPSCity();
                 initHOTCity();
+//                绑定数据 设置头 和热门城市
                 mMySview.bindDatas(mlist, gpsHeader, hotHeader);
 
             }

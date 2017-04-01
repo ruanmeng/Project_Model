@@ -9,9 +9,11 @@ import android.widget.Button;
 
 import com.ruanmeng.project_model.R;
 import com.ruanmeng.project_model.gitview.myRulerview.RulerView_Activity;
+import com.ruanmeng.project_model.gitview.mySuperTextview.MyTestTextView;
 import com.ruanmeng.project_model.gitview.mycheckbox.MyCheckBox;
 import com.ruanmeng.project_model.gitview.myflashtv.MyFlashTextView;
 import com.ruanmeng.project_model.gitview.myprogress.MyTestProgress;
+import com.ruanmeng.project_model.gitview.web_progress.MyProgress_WebView;
 import com.ruanmeng.utils.CircularAnimUtil;
 
 import butterknife.BindView;
@@ -30,6 +32,10 @@ public class MyGitVIew extends AppCompatActivity {
     Button btnMyBox;
     @BindView(R.id.btn_my_rulerview)
     Button btnMyRulerview;
+    @BindView(R.id.btn_my_pro_web)
+    Button btnMyProWeb;
+    @BindView(R.id.btn_my_textview)
+    Button btnMyTextview;
 
 
     private Activity bContext;
@@ -50,7 +56,7 @@ public class MyGitVIew extends AppCompatActivity {
         CircularAnimUtil.show(btnMyFlashtv);
     }
 
-    @OnClick({R.id.btn_my_probar, R.id.btn2, R.id.btn_my_flashtv, R.id.btn_my_box, R.id.btn_my_rulerview})
+    @OnClick({R.id.btn_my_probar, R.id.btn2, R.id.btn_my_flashtv, R.id.btn_my_box, R.id.btn_my_rulerview, R.id.btn_my_pro_web, R.id.btn_my_textview})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_my_probar:
@@ -73,6 +79,14 @@ public class MyGitVIew extends AppCompatActivity {
 
                 startActivity(new Intent(bContext, RulerView_Activity.class));
                 break;
+            case R.id.btn_my_pro_web:
+
+                startActivity(new Intent(bContext, MyProgress_WebView.class));
+                break;
+            case R.id.btn_my_textview:
+                startActivity(new Intent(bContext, MyTestTextView.class));
+
+                break;
             case R.id.btn2:
                 break;
         }
@@ -85,5 +99,6 @@ public class MyGitVIew extends AppCompatActivity {
 
         overridePendingTransition(R.anim.shake, R.anim.trans_center_2_right);
     }
+
 
 }

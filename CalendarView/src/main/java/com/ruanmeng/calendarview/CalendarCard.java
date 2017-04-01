@@ -136,7 +136,7 @@ public class CalendarCard extends View {
                     if (data != null) {
                         for (int k = 0; k < data.size(); k++) {
                             String[] d = data.get(k).split("-");
-                            if (mShowDate.year==Integer.valueOf(d[0])&mShowDate.month==Integer.valueOf(d[1])&day == Integer.valueOf(d[2])) {
+                            if (mShowDate.year == Integer.valueOf(d[0]) & mShowDate.month == Integer.valueOf(d[1]) & day == Integer.valueOf(d[2])) {
                                 CustomDate date = CustomDate
                                         .modifiDayForObject(mShowDate, day);
                                 rows[j].cells[i] = new Cell(date,
@@ -346,8 +346,30 @@ public class CalendarCard extends View {
         update();
     }
 
+    // 从上往下，上一个月
+    public void upSlide() {
+        if (mShowDate.month == 1) {
+            mShowDate.month = 12;
+            mShowDate.year -= 1;
+        } else {
+            mShowDate.month -= 1;
+        }
+        update();
+    }
+
     // 从右往左划，下一个月
     public void rightSlide() {
+        if (mShowDate.month == 12) {
+            mShowDate.month = 1;
+            mShowDate.year += 1;
+        } else {
+            mShowDate.month += 1;
+        }
+        update();
+    }
+
+    // 从下往上划，下一个月
+    public void downSlide() {
         if (mShowDate.month == 12) {
             mShowDate.month = 1;
             mShowDate.year += 1;

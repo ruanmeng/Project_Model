@@ -37,7 +37,7 @@ import com.ruanmeng.project_model.mylockview.myui.MyOperation_Activity;
 import com.ruanmeng.project_model.mynetwork.Activity_NetText1;
 import com.ruanmeng.project_model.mynohttp.Activity_MyNoHttp;
 import com.ruanmeng.project_model.myrecyclerview.ui.MyRecyclerView;
-import com.ruanmeng.project_model.myscroll.MyTextScroll;
+import com.ruanmeng.project_model.myscroll.MyTestScroll2;
 import com.ruanmeng.project_model.myselectview.myui.Activity_MySelect;
 import com.ruanmeng.project_model.myzoomview.Text_ZoomActivity;
 import com.ruanmeng.project_model.orderlist.OrderActivity;
@@ -289,9 +289,8 @@ public class MainActivity extends AppCompatActivity implements SpringScrollView.
 //                startActivity(ScrollviewHeaderActivity.class);
                 break;
             case R.id.button39:
-                startActivity(new Intent(this, MyTextScroll.class));
-//                startActivity(new Intent(this, MyLoadViw2.class));
-//                startActivity(ScrollviewHeaderActivity.class);
+                startActivity(new Intent(this, MyTestScroll2.class));
+//                startActivity(new Intent(this, MyTextScroll.class));
                 break;
 
         }

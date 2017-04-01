@@ -59,9 +59,11 @@ public class MyEdittext_Activity extends AppCompatActivity {
 
     private void init() {
 //            银行卡号  长度不一定
-        editMoney.setMaxLength(16 + 3);
+//        editMoney.setMaxLength(16 + 3);
+        editMoney.setMaxLength(19 + 4);
         editMoney.setSeparator("-");
-        editMoney.setPattern(new int[]{4, 4, 4, 4});
+//        editMoney.setPattern(new int[]{4, 4, 4, 4});
+        editMoney.setPattern(new int[]{4, 4, 4, 4, 3});
 //         电话号
         editPhone.setMaxLength(11 + 2);
         editPhone.setSeparator(" ");

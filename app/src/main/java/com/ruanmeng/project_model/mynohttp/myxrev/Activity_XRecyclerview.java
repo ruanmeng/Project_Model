@@ -40,7 +40,7 @@ public class Activity_XRecyclerview extends AppCompatActivity {
     String Ip = "http://kge.gexiazi.com/tools/Interface.ashx";
     public String Img_Ip = "http://kge.gexiazi.com";
 
-//    private BaseRecyclerAdapter<NewsM.NewsInfo> madapter = null;
+    //    private BaseRecyclerAdapter<NewsM.NewsInfo> madapter = null;
     private RecyclerView.Adapter madapter;
 
 
@@ -53,7 +53,7 @@ public class Activity_XRecyclerview extends AppCompatActivity {
 
         init();
 
-getIndexData(true);
+        getIndexData(true);
     }
 
     private void init() {
@@ -186,36 +186,12 @@ getIndexData(true);
 
                 @Override
                 protected void bindData(RecyclerViewHolder holder, int position, NewsM.NewsInfo item) {
-//                    holder.setText(R.id.tv_title, Temp_List.get(position).getTitle());
-//                    holder.setText(R.id.tv_date, Temp_List.get(position).getDate());
-//                    holder.setText(R.id.tv_desc, Temp_List.get(position).getInfo());
-//                    Picasso.with(mContext).load(Img_Ip + Temp_List.get(position).getLogo1()).placeholder(R.drawable.ic_launcher).error(R.drawable.ic_launcher).into(holder.getImageView(R.id.img_head));
-
-                    holder.setText(R.id.tv_title,item.getTitle());
+                    holder.setText(R.id.tv_title, item.getTitle());
                     holder.setText(R.id.tv_date, item.getDate());
                     holder.setText(R.id.tv_desc, item.getInfo());
                     Picasso.with(mContext).load(Img_Ip + item.getLogo1()).placeholder(R.drawable.ic_launcher).error(R.drawable.ic_launcher).into(holder.getImageView(R.id.img_head));
-
-
-
                 }
 
-
-//                @Override
-//                protected void bindData(RecyclerViewHolder holder, int position, Object item) {
-//                    holder.setText(R.id.tv_title, Temp_List.get(position).getTitle());
-//                    holder.setText(R.id.tv_date, Temp_List.get(position).getDate());
-//                    holder.setText(R.id.tv_desc, Temp_List.get(position).getInfo());
-//                    Picasso.with(mContext).load(Img_Ip + Temp_List.get(position).getLogo1()).placeholder(R.drawable.ic_launcher).error(R.drawable.ic_launcher).into(holder.getImageView(R.id.img_head));
-//
-//                }
-//
-//                @Override
-//                public void onBindViewHolder(RecyclerViewHolder holder, int position) {
-//                    View view=LayoutInflater.from(basecontext).inflate(R.layout.news_item,null,false);
-////                    bindData(new RecyclerViewHolder(basecontext,view), position, mItems.get(position));
-//
-//                }
             };
             xrecycler.setAdapter(madapter);
         } else {
